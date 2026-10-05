@@ -1,0 +1,73 @@
+<!-- Semantics in Tables -->
+ <!--
+Semantics in tables refers to the use of appropriate HTML elements to structure and organize tabular data in a meaningful way.
+Using semantic elements helps improve accessibility, readability, and maintainability of the table.
+
+Table Semantic Elements:
+1. <thead> used to wrap the header content of a table.
+2. <tbody> used to wrap the body content of a table.
+3. <tfoot> used to wrap the footer content of a table.
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Semantics in Tables</title>
+    </head>
+    <body>
+        <table border="black">
+            <caption>Grocery Expenditure</caption>
+            <!-- Table Header -->
+            <thead>
+                <tr>
+                    <th>Food Item</th>
+                    <th>Quantity</th>
+                    <th>Money Spent</th>
+                </tr>
+            </thead>
+            <!-- Table Data -->
+            <tbody>
+                <tr>
+                    <td>Milk (1L)</td>
+                    <td>2</td>
+                    <td>$40</td>
+                </tr>
+                <tr>
+                    <td>Bread </td>
+                    <td>1</td>
+                    <td>$18</td>
+                </tr>
+                <tr>
+                    <td>Eggs</td>
+                    <td>1</td>
+                    <td>$15</td>
+                </tr>
+                <tr>
+                    <td>Apples</td>
+                    <td>6</td>
+                    <td>$20</td>
+                </tr>
+                <tr>
+                    <td>Bananas</td>
+                    <td>5</td>
+                    <td>$10</td>
+                </tr>
+                <tr>
+                    <td>Fries(500 g)</td>
+                    <td>1</td>
+                    <td>$30</td>
+                </tr>
+            </tbody>
+            <!-- Table Footer -->
+            <tfoot>
+                <tr>
+                    <td>Total</td>
+                    <td>16</td>
+                    <td>$133</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>

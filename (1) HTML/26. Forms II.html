@@ -1,0 +1,55 @@
+<!-- Forms in HTML - Part II -->
+<!-- 
+Input Elements:
+(a) Checkbox input allows users to select one or more options from a list. 
+(b) Radio button input allows users to select only one option from a group of options.
+(c) Select element creates a dropdown menu that allows users to select one or more options from a list.
+(d) Range input creates a slider control that allows users to select a value from a specified range.
+(e) Textarea element creates a multi-line text input field that allows users to enter longer pieces of text, such as comments or feedback.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms II</title>
+    </head>
+    <body>
+        <form action="/submit" method="post">
+            <h2>Survey Form</h2>
+
+            <!-- Checkbox input -->
+            <p>What are your interests?</p>
+            <label><input type="checkbox" name="interests" value="sports"> Sports</label><br>
+            <label><input type="checkbox" name="interests" value="music"> Music</label><br>
+            <label><input type="checkbox" name="interests" value="travel"> Travel</label><br>
+
+            <!-- Radio button input -->
+            <p>What is your favorite season?</p>
+            <label><input type="radio" name="season" value="spring"> Spring</label><br>
+            <label><input type="radio" name="season" value="summer"> Summer</label><br>
+            <label><input type="radio" name="season" value="fall"> Fall</label><br>
+            <label><input type="radio" name="season" value="winter"> Winter</label><br>
+
+            <!-- Select element -->
+            <label for="country">Select your country:</label>
+            <select id="country" name="country">
+                <option value="usa">USA</option>
+                <option value="canada">Canada</option>
+                <option value="uk">UK</option>
+                <option value="australia">Australia</option>
+            </select><br>
+
+            <!-- Range input -->
+            <label for="age">Select your age:</label>
+            <input type="range" id="age" name="age" min="0" max="100"><br>
+
+            <!-- Textarea element -->
+            <label for="comments">Comments:</label><br>
+            <textarea id="comments" name="comments" rows="4" cols="50"></textarea><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+</html>
