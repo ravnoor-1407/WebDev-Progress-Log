@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Says Game</title>
+    <!-- Icon -->
+    <link rel="icon" href="assets/images/simon.ico">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Simon Says Game</h1>
+
+    <div class="game-board">
+        <div class="row">
+            <button id="green" class="color-btn"></button>
+            <button id="red" class="color-btn"></button>
+        </div>
+        <div class="play-btn">
+            <span>Let's Play</span>
+        </div>
+        <div class="row">
+            <button id="yellow" class="color-btn"></button>
+            <button id="blue" class="color-btn"></button>
+        </div>
+    </div>
+
+    <div class="score-board">
+        <div class="score">
+            <p class="score-value">0</p>
+            <h2>Your Score</h2>
+        </div>
+        <div class="high-score">
+            <p class="high-score-value">0</p>
+            <h2>High Score</h2>
+        </div>
+    </div>
+
+    <div class="cursor-glow"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+/* Page Layout */
+body {
+    background-color: rgb(25, 25, 25);   /* Dark background for contrast */
+    display: flex;                       /* Flexbox for vertical alignment */
+    flex-direction: column;              /* Stack elements top-to-bottom */
+    align-items: center;                 /* Center horizontally */
+    min-height: 100vh;                   /* Full viewport height */
+    margin: 0;                           /* Remove default margin */
+    cursor: none;
+}
+
+/* Heading */
+h1 {
+    color: white;                        /* White text for visibility */
+    font-family: "Playfair Display";     /* Elegant serif font */
+    text-align: center;                  /* Centered heading */
+    font-size: 45px;                     /* Large size for prominence */
+    margin: 40px 0px 20px 0px;           /* Spacing above and below */
+}
+
+/* Game Board Container */
+.game-board {
+    position: relative;                  /* Needed for play button overlay */
+    width: 400px;                        /* Fixed square size */
+    height: 400px;
+    display: flex;                       /* Flex layout for rows */
+    flex-wrap: wrap;                     /* Wrap into two rows */
+    margin-top: 20px;                    /* Space below heading */
+}
+
+/* Row Layout */
+.row {
+    display: flex;                       /* Horizontal row of buttons */
+    width: 100%;                         /* Full width of board */
+}
+
+/* Color Buttons (Base) */
+.color-btn {
+    height: 200px;                       /* Each quadrant half board size */
+    width: 200px;
+}
+
+/* Quadrant Styles */
+#green {
+    background-color: green;             /* Green quadrant */
+    border-radius: 200px 0 0 0;          /* Top-left rounded corner */
+    margin: 0px 10px 10px 0px;           /* Spacing between quadrants */
+}
+
+#red {
+    background-color: red;               /* Red quadrant */
+    border-radius: 0 200px 0 0;          /* Top-right rounded corner */
+    margin: 0px 0px 10px 10px;
+}
+
+#yellow {
+    background-color: yellow;            /* Yellow quadrant */
+    border-radius: 0 0 0 200px;          /* Bottom-left rounded corner */
+    margin: 10px 10px 0px 0px;
+}
+
+#blue {
+    background-color: blue;              /* Blue quadrant */
+    border-radius: 0 0 200px 0;          /* Bottom-right rounded corner */
+    margin: 10px 0px 0px 10px;
+}
+
+/* Glow Effects (Active Click) */
+.green-click {
+    background-color: rgb(150, 255, 150) !important; /* Lighter green flash */
+    box-shadow: 0 0 25px 10px rgba(0, 255, 0, 0.7);  /* Green glow */
+}
+
+.red-click {
+    background-color: rgb(255, 150, 150) !important; /* Lighter red flash */
+    box-shadow: 0 0 25px 10px rgba(255, 0, 0, 0.7);  /* Red glow */
+}
+
+.yellow-click {
+    background-color: rgb(255, 255, 150) !important; /* Lighter yellow flash */
+    box-shadow: 0 0 25px 10px rgba(255, 255, 0, 0.7);/* Yellow glow */
+}
+
+.blue-click {
+    background-color: rgb(150, 150, 255) !important; /* Lighter blue flash */
+    box-shadow: 0 0 25px 10px rgba(0, 0, 255, 0.7);  /* Blue glow */
+}
+
+/* Play Button (Center Overlay) */
+.play-btn {
+    background-color: rgb(25, 25, 25);   /* Matches background */
+    border-radius: 50%;                  /* Perfect circle */
+    box-shadow: 0 0 50px;                /* Glow around button */
+    height: 190px;
+    width: 190px;
+    position: absolute;                  /* Overlay on board */
+    top: 50%; left: 50%;                 /* Centered */
+    transform: translate(-50%, -50%);    /* Adjust to exact center */
+    text-align: center;
+    z-index: 10;                         /* Above quadrants */
+}
+
+.play-btn span {
+    color: white;                        /* White text inside button */
+    font-family: "Playfair Display";     /* Same elegant font */
+    text-align: center;
+    font-size: 28px;                     /* Medium size */
+    font-weight: 650;                    /* Bold weight */
+    position: relative;
+    top: 30%;                            /* Push text downward */
+    transform: translateY(-50%);         /* Center vertically */
+}
+
+/* Score Board */
+.score-board {
+    display: flex;                       /* Side-by-side scores */
+    justify-content: center;             /* Center horizontally */
+    align-items: flex-start;             /* Align to top */
+    gap: 80px;                           /* Space between scores */
+    margin-top: 40px;                    /* Space below game board */
+}
+
+.score-board p {
+    color: white;                        /* Score value color */
+    font-family: "Playfair Display";     /* Consistent font */
+    font-size: 40px;                     /* Large score numbers */
+    font-weight: bold;
+    text-align: center;
+    margin: 0;                           /* Remove default spacing */
+}
+
+.score-board h2 {
+    color: white;                        /* Label color */
+    font-family: "Playfair Display";
+    font-size: 25px;                     /* Smaller than score */
+    text-align: center;
+    margin-top: 10px;                    /* Space below numbers */
+}
+
+/* Custom Cursor Glow */
+.cursor-glow {
+    position: fixed;                     /* Follows cursor across screen */
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;                  /* Circular glow */
+    background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.3) 40%, transparent 70%);
+    box-shadow: 0 0 20px 6px rgba(255,255,255,0.5); /* Default white glow */
+    pointer-events: none;                /* Allows clicks to pass through */
+    transform: translate(-50%, -50%);    /* Center glow on cursor */
+    z-index: 9999;                       /* Always on top */
+    transition: transform 0.08s ease-out, background 0.2s ease, box-shadow 0.2s ease; /* Smooth animation */
+}
+
+/* Cursor click feedback */
+.cursor-glow.clicking {
+    transform: translate(-50%, -50%) scale(0.7); /* Shrinks slightly on click */
+}
