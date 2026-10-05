@@ -1,0 +1,23 @@
+<!-- Facebook EJS Template -->
+<%- include("includes/header.ejs") %> <!-- Use the includes concept to include the head section -->
+<body>
+    <h1>Facebook Profile</h1>
+    <h3>This page belongs to @<%= data.username %></h3>
+    <button>Follow</button>
+    <button>Message</button>
+
+    <p>Followers: <%= data.followers %>&nbsp;&nbsp;&nbsp;Following: <%= data.following %></p>
+    <hr>
+    <h2>Posts</h2> <!-- Loop used to display posts -->
+    <% data.posts.forEach(post => { %>
+        <div>
+            <img src="<%= post.image %>" alt="Post Image" style="max-width: 200px;">
+            <p>Likes: <%= post.likes %></p>
+            <p>Comments: <%= post.comments %></p>
+        </div>
+    <% }); %>
+
+    <%- include("includes/footer.ejs") %>
+</body>
+<script src="/script.js"></script>
+</html>
