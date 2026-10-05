@@ -1,0 +1,842 @@
+GIT & GITHUB Documentation
+
+1. WHAT IS GIT?
+
+Definition:
+Git is a distributed version control system (VCS) used to track changes in
+source code and manage different versions of a project.
+
+Why use Git?
+- Tracks every important change in a project.
+- Allows developers to go back to previous versions.
+- Helps multiple developers work on the same project.
+- Provides branching and merging.
+- Keeps a local copy of the repository.
+Important:
+Git is a software/tool installed on your computer.
+GitHub is an online platform that hosts Git repositories.
+
+2. WHAT IS GITHUB?
+
+Definition:
+GitHub is a cloud-based platform used to store, manage, share, and
+collaborate on Git repositories.
+
+Git vs GitHub:
+Git      -> Version control tool
+GitHub   -> Online hosting/collaboration platform for Git repositories
+
+Other Git hosting platforms:
+- GitLab
+- Bitbucket
+
+3. INSTALLING GIT
+Step 1: Download and install Git from the official Git website.
+Step 2: Open Terminal / Command Prompt / Git Bash.
+Step 3: Check installation:
+    git --version
+
+If Git is installed correctly, it displays the installed Git version.
+
+4. CONFIGURING GIT
+Git should be configured with your name and email.
+
+Set username:
+    git config --global user.name "Your Name"
+
+Set email:
+    git config --global user.email "your@email.com"
+
+Check configuration:
+    git config --list
+
+Why configure Git?
+Git uses this information to identify who made a commit.
+
+Example:
+
+    git config --global user.name "Ravnoor"
+    git config --global user.email "example@email.com"
+
+5. GIT WITH VS CODE
+VS Code has built-in Git support.
+
+Basic setup:
+1. Install Git.
+2. Install/open VS Code.
+3. Open your project folder in VS Code.
+4. Open Source Control from the left sidebar.
+5. VS Code automatically detects a Git repository if one exists.
+6. You can stage, commit, create branches, and view changes from VS Code.
+
+Terminal inside VS Code:
+    Ctrl + (backtick) or View -> Terminal
+You can run normal Git commands directly in the VS Code terminal.
+
+6. REPOSITORY (REPO)
+
+Definition:
+A repository is a project folder tracked by Git.
+
+A repository contains:
+- Project files
+- Git history
+- Commits
+- Branch information
+- Configuration data
+
+Local repository:
+A repository stored on your computer.
+
+Remote repository:
+A repository stored on a remote service such as GitHub.
+
+7. git init
+
+Definition:
+Initializes a normal project folder as a new Git repository.
+
+Syntax:
+    git init
+
+Example:
+    mkdir my-project
+    cd my-project
+    git init
+
+After git init, Git creates a hidden ".git" directory.
+
+Important:
+Do not delete the .git folder unless you intentionally want to remove
+Git tracking from that project.
+
+8. git clone
+
+Definition:
+Copies an existing remote repository to your local computer.
+
+Syntax:
+    git clone <repository-url>
+
+Example:
+    git clone https://github.com/user/project.git
+
+After cloning:
+- A local project folder is created.
+- Git history is downloaded.
+- A remote connection is normally created as "origin".
+
+Clone is generally used when the repository already exists online.
+
+9. git status
+
+Definition:
+Shows the current state of the working directory and staging area.
+
+Syntax:
+    git status
+
+It can show:
+- Modified files
+- Untracked files
+- Staged files
+- Current branch
+- Changes ready to commit
+
+Use it frequently before and after Git commands.
+
+10. git add
+
+Definition:
+Moves changes from the working directory to the staging area.
+
+Add one file:
+
+    git add filename
+
+Add all changed/untracked files:
+
+    git add .
+
+Example:
+    git add index.html
+
+Important:
+git add does NOT create a commit.
+It prepares changes for the next commit.
+
+11. git commit
+
+Definition:
+Records staged changes permanently in the Git history.
+
+Syntax:
+    git commit -m "commit message"
+
+Example:
+    git commit -m "Add homepage"
+
+Good commit messages:
+- "Add login page"
+- "Fix navbar bug"
+- "Update README"
+
+Bad commit message:
+- "changes"
+- "stuff"
+
+12. git push
+
+Definition:
+Uploads local commits to a remote repository such as GitHub.
+
+Syntax:
+    git push <remote> <branch>
+
+Common command:
+
+    git push origin main
+
+If the upstream branch is already configured:
+
+    git push
+
+Meaning:
+local repository -> remote repository
+
+13. PUSHING A LOCAL REPOSITORY TO GITHUB
+
+Suppose you already have a project on your computer.
+
+Step 1: Open the project:
+    cd my-project
+
+Step 2: Initialize Git:
+    git init
+
+Step 3: Check files:
+    git status
+
+Step 4: Stage files:
+    git add .
+
+Step 5: Commit:
+    git commit -m "Initial commit"
+
+Step 6: Create an empty/new repository on GitHub.
+
+Step 7: Connect local repository to GitHub:
+    git remote add origin <repository-url>
+
+Example:
+    git remote add origin https://github.com/user/my-project.git
+
+Step 8: Make sure the branch is called main:
+    git branch -M main
+
+Step 9: Push:
+    git push -u origin main
+
+The "-u" sets the upstream branch, so future pushes can usually use:
+
+    git push
+
+14. git remote
+
+Definition:
+Manages connections to remote repositories.
+
+Show remotes:
+    git remote -v
+
+Add a remote:
+    git remote add origin <repository-url>
+
+"origin" is the conventional name given to the main remote repository.
+
+15. COMPLETE BASIC GIT WORKFLOW
+
+The most important workflow:
+
+    1. Create/Open project
+            |
+            v
+    2. git init / git clone
+            |
+            v
+    3. Make changes
+            |
+            v
+    4. git status
+            |
+            v
+    5. git add .
+            |
+            v
+    6. git commit -m "message"
+            |
+            v
+    7. git push
+
+In short:
+
+    Working Directory
+          |
+       git add
+          v
+    Staging Area
+          |
+     git commit
+          v
+    Local Repository
+          |
+      git push
+          v
+    Remote Repository
+
+
+16. GIT BRANCH
+
+Definition:
+A branch is an independent line of development in a Git repository.
+
+Why use branches?
+- Develop features separately.
+- Fix bugs without disturbing the main code.
+- Allow multiple developers to work simultaneously.
+- Test changes before merging them into the main branch.
+
+Common branch:
+    main
+
+Example:
+    main
+      |
+      +---- feature-login
+      |
+      +---- bugfix-navbar
+
+
+17. BRANCH COMMANDS
+
+Show current branches:
+
+    git branch
+
+Create a new branch:
+
+    git branch feature-login
+
+Switch to a branch:
+
+    git switch feature-login
+
+Create and switch to a new branch:
+
+    git switch -c feature-login
+
+Older/common command:
+
+    git checkout -b feature-login
+
+Switch back to main:
+
+    git switch main
+
+Delete a local branch:
+
+    git branch -d feature-login
+
+Force delete a branch:
+
+    git branch -D feature-login
+
+Rename current branch:
+
+    git branch -M main
+
+
+18. WORKING WITH A FEATURE BRANCH
+
+Example:
+
+    git switch -c feature-login
+
+Make changes to files.
+
+Check changes:
+
+    git status
+
+Stage:
+
+    git add .
+
+Commit:
+
+    git commit -m "Add login feature"
+
+Push the branch:
+
+    git push -u origin feature-login
+
+Now the feature branch exists on GitHub.
+
+
+19. MERGING BRANCHES
+
+Definition:
+Merging combines the changes of one branch into another branch.
+
+Example:
+You have:
+    main
+    feature-login
+
+To merge feature-login into main:
+
+Step 1:
+    git switch main
+
+Step 2:
+    git merge feature-login
+
+If there are no conflicts, Git completes the merge.
+
+Typical workflow:
+
+    git switch main
+    git pull
+    git merge feature-login
+    git push
+
+
+20. git pull
+
+Definition:
+Downloads changes from a remote repository and integrates them into
+your current local branch.
+
+Syntax:
+    git pull
+
+or:
+
+    git pull origin main
+
+Conceptually:
+
+    git pull = git fetch + integration (usually merge)
+
+Why use it?
+To update your local branch with changes that exist on the remote.
+
+Typical workflow before starting work:
+
+    git switch main
+    git pull
+
+
+21. MERGE CONFLICT
+
+Definition:
+A merge conflict occurs when Git cannot automatically combine changes,
+usually because different branches modified the same part of a file.
+
+Example:
+
+Branch A:
+    color: red;
+
+Branch B:
+    color: blue;
+
+If both changes affect the same lines, Git may report a conflict.
+
+Conflict markers may look like:
+
+    <<<<<<< HEAD
+    color: red;
+    =======
+    color: blue;
+    >>>>>>> feature-branch
+
+
+22. HOW TO FIX A MERGE CONFLICT
+
+Step 1: Run the merge:
+
+    git merge feature-branch
+
+Step 2: Git identifies conflicted files.
+
+Step 3: Open the conflicted file.
+
+Step 4: Decide which changes to keep.
+You can:
+- Keep current branch changes.
+- Keep incoming branch changes.
+- Combine both manually.
+
+Step 5: Remove the conflict markers:
+
+    <<<<<<<
+    =======
+    >>>>>>>
+
+Step 6: Save the file.
+
+Step 7: Stage the resolved file:
+
+    git add filename
+
+Step 8: Complete the merge:
+
+    git commit -m "Resolve merge conflict"
+
+Step 9: Push if required:
+
+    git push
+
+VS Code:
+The Source Control panel provides buttons such as:
+- Accept Current Change
+- Accept Incoming Change
+- Accept Both Changes
+- Compare Changes
+
+
+23. FIXING MISTAKES
+
+A) Check what changed:
+
+    git status
+
+    git diff
+
+B) Unstage a file:
+Modern command:
+
+    git restore --staged filename
+
+This removes it from staging but keeps the file changes.
+
+C) Discard changes in a file:
+
+    git restore filename
+
+WARNING:
+This can permanently discard uncommitted changes.
+
+D) Change the latest commit message:
+
+    git commit --amend -m "Correct message"
+
+E) Add forgotten changes to the latest commit:
+
+    git add forgotten-file
+    git commit --amend --no-edit
+
+F) Undo a committed change safely:
+
+    git revert <commit-id>
+
+This creates a new commit that reverses the earlier commit.
+
+G) View commit history:
+
+    git log
+
+Short version:
+
+    git log --oneline
+
+Important:
+Prefer git revert for undoing changes that have already been pushed/shared.
+
+
+24. git log
+
+Definition:
+Displays commit history.
+
+Commands:
+
+    git log
+
+    git log --oneline
+
+Example output:
+
+    a1b2c3d Add login page
+    d4e5f6g Update navbar
+    h7i8j9k Initial commit
+
+The first part is the commit ID/hash.
+
+
+25. FORKING
+
+Definition:
+Forking creates your own copy of another user X repository on GitHub.
+
+Forking is mainly useful when:
+- You do not have write access to the original repository.
+- You want to contribute to an open-source project.
+- You want an independent copy of the project on your GitHub account.
+
+Typical Fork Workflow:
+
+    Original Repository
+            |
+          Fork
+            v
+    Your GitHub Repository
+            |
+          Clone
+            v
+    Your Local Repository
+            |
+       Create Branch
+            |
+       Make Changes
+            |
+          Commit
+            |
+          Push
+            |
+      Pull Request
+            |
+    Original Repository
+
+Important:
+Forking happens on GitHub.
+Cloning copies a repository from a remote location to your computer.
+
+
+26. FORK vs CLONE
+
+Fork:
+- Creates a copy under your GitHub account.
+- Mainly a GitHub feature.
+- Useful when contributing without direct write access.
+
+Clone:
+- Downloads a repository to your computer.
+- A Git command.
+- Used to work locally.
+
+
+27. PULL REQUEST (PR)
+
+Definition:
+A Pull Request is a request to merge changes from one branch/repository
+into another repository or branch.
+
+Typical open-source flow:
+
+    Fork -> Clone -> Branch -> Code -> Commit -> Push -> Pull Request
+
+A Pull Request allows maintainers to:
+- Review code.
+- Discuss changes.
+- Request modifications.
+- Merge the contribution.
+
+
+28. IMPORTANT COMMAND CHEAT SHEET
+
+Check Git version:
+    git --version
+
+Configure name:
+    git config --global user.name "Your Name"
+
+Configure email:
+    git config --global user.email "email@example.com"
+
+Initialize:
+    git init
+
+Clone:
+    git clone <url>
+
+Check status:
+    git status
+
+Stage one file:
+    git add <file>
+
+Stage everything:
+    git add .
+
+Commit:
+    git commit -m "message"
+
+Show history:
+    git log
+    git log --oneline
+
+Show changes:
+    git diff
+
+Show branches:
+    git branch
+
+Create branch:
+    git branch <branch-name>
+
+Create + switch:
+    git switch -c <branch-name>
+
+Switch branch:
+    git switch <branch-name>
+
+Delete branch:
+    git branch -d <branch-name>
+
+Merge:
+    git merge <branch-name>
+
+Pull:
+    git pull
+
+Push:
+    git push
+
+Push first time:
+    git push -u origin <branch-name>
+
+Show remote:
+    git remote -v
+
+Add remote:
+    git remote add origin <url>
+
+Unstage:
+    git restore --staged <file>
+
+Discard unstaged changes:
+    git restore <file>
+
+Undo a commit safely:
+    git revert <commit-id>
+
+
+29. IMPORTANT CONCEPTS TO REMEMBER
+
+Working Directory:
+The files you are currently editing.
+
+Staging Area:
+The place where selected changes are prepared for the next commit.
+
+Local Repository:
+Git history stored on your computer.
+
+Remote Repository:
+Repository stored on a remote service such as GitHub.
+
+Commit:
+A saved snapshot of staged changes.
+
+Branch:
+An independent line of development.
+
+Merge:
+Combines changes from one branch into another.
+
+Push:
+Uploads local commits to a remote repository.
+
+Pull:
+Gets remote changes and integrates them into the current local branch.
+
+Clone:
+Copies a remote repository to your computer.
+
+Fork:
+Creates your own GitHub copy of another repository.
+
+Pull Request:
+Requests that changes be reviewed and merged into another repository/branch.
+
+
+30. COMMON MISTAKES
+-------------------
+1. Forgetting to run git status.
+2. Committing without a meaningful message.
+3. Using git add but forgetting to commit.
+4. Committing but forgetting to push.
+5. Pulling/merging without resolving conflicts.
+6. Working directly on main when a feature branch should be used.
+7. Accidentally using git restore and losing uncommitted changes.
+8. Confusing Git with GitHub.
+9. Forgetting to set Git username/email.
+10. Pushing to the wrong branch.
+11. Force-pushing shared branches without understanding the consequences.
+12. Committing passwords, API keys, or secret files.
+
+
+31. GOLDEN GIT WORKFLOW FOR DAILY DEVELOPMENT
+
+Start work:
+
+    git switch main
+    git pull
+
+Create a feature:
+
+    git switch -c feature-name
+
+Write code and test it.
+
+Check:
+
+    git status
+
+Stage:
+
+    git add .
+
+Commit:
+
+    git commit -m "Describe the change"
+
+Push:
+
+    git push -u origin feature-name
+
+Then create a Pull Request on GitHub.
+
+After the feature is merged:
+
+    git switch main
+    git pull
+
+Delete local feature branch if no longer needed:
+
+    git branch -d feature-name
+
+
+32. ONE-LINE MEMORY TRICK
+
+Git workflow:
+
+    INIT/CLONE
+       ↓
+     EDIT
+       ↓
+    STATUS
+       ↓
+      ADD
+       ↓
+    COMMIT
+       ↓
+     PUSH
+       ↓
+    GITHUB
+
+When collaborating:
+
+    PULL → BRANCH → EDIT → ADD → COMMIT → PUSH → PULL REQUEST → MERGE
