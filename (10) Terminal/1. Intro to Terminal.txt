@@ -1,0 +1,29 @@
+INTRODUCTION TO TEMINAL AND DIFFERENT TERMS RELATED TO TERMINAL
+
+The terminal is your gateway to interacting directly with your computer’s operating system.
+
+###🖥️ Key Terms Explained
+
+# 1. Terminal (Mac centric) 
+- * A program that opens a window where you can type commands.  
+
+# 2. Command Line (Windows centric)
+- * The interface that is used by entering textual commands.
+
+# 3. Console
+- * Historically, the physical screen/keyboard used to interact with the computer. Today, it often means the same as “terminal.”  
+
+# 4. Shell
+- * The program that interprets your commands and passes them to the operating system.  
+
+# 5. Bash (Bourne Again SHell)
+- * One of the most widely used shells, especially on Linux.  
+
+# 6. Zsh (Z Shell)
+- * A modern shell, similar to Bash but with more features. It is pre installed in the MacOS.
+
+
+## ⚡ Why This Matters
+- * Efficiency: Using the terminal is faster than GUI for many tasks (e.g., file management, automation).  
+- * Customization: Shells like Zsh allow themes, plugins, and productivity boosts.  
+- * Universality: Knowing Bash/Zsh makes you comfortable across Linux, macOS, and even Windows (via WSL).  

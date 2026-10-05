@@ -1,0 +1,82 @@
+TERMINAL / GIT BASH COMMANDS
+
+# Navigation
+ls                → list files
+pwd               → print working directory
+cd <folder_name>  → change directory
+cd ..             → go back one directory
+clear             → clear terminal screen
+
+# File & Folder Management
+mkdir <folder_name>  → create new folder
+rmdir <folder_name>  → remove empty folder
+touch <file_name>    → create new empty file
+rm <file_name>       → delete file
+rm -rf <file_name>   → delete file with recursive force
+
+# Paths
+- * Absolute Path → starts from root (/ or C:\), full location
+1. Suppose you have this folder structure: /home/ravnoor/projects/myapp
+2. To go directly into myapp from anywhere: cd /home/ravnoor/projects/myapp
+
+- * Relative Path → based on current directory, uses . (current) and .. (parent)
+1. Now imagine you’re already inside: /home/ravnoor/projects
+2. To go into myapp: cd myapp
+3. To go back one level (to /home/ravnoor): cd ..
+4. To go two levels up (to /home): cd ../..
+- These commands depend on your current location (pwd).
+
+# Viewing Files
+cat <file_name>      → show file contents
+less <file_name>     → view file page by page
+head <file_name>     → show first 10 lines
+tail <file_name>     → show last 10 lines
+nano <file_name>     → open file in nano editor
+
+# Git Commands
+git init            → initialize repository
+git clone <url>     → copy repo from remote
+git status          → check repo status
+git add <file>      → stage file for commit
+git commit -m "msg" → commit changes
+git log             → view commit history
+git branch          → list branches
+git checkout <branch> → switch branch
+git push            → upload commits to remote
+git pull            → fetch & merge changes
+
+LINUX COMMANDS AND FLAGS
+
+1. Manual Command (man)
+- The 'man' command is used to open the manual page of another command.
+- It provides detailed information, usage, and available flags.
+Examples:
+man ls      → Shows info about the 'ls' command (used to list files).
+man mkdir   → Shows info about the 'mkdir' command (used to create directories).
+
+
+2. ls Command with Flags
+- The 'ls' command lists files and directories.
+- Flags (options) modify its behavior.
+
+Common Flags:
+ls -l   → Long listing format. Shows details like permissions, owner, size, and date.
+ls -a   → Shows all files, including hidden ones (files starting with '.').
+ls -la  → Combines both: detailed listing + hidden files.
+Examples:
+ls        → Lists files in the current directory.
+ls -l     → Lists files with detailed information.
+ls -a     → Lists all files, including hidden ones.
+ls -la    → Detailed listing of all files, including hidden ones.
+
+
+3. mkdir Command
+- The 'mkdir' command is used to create directories (folders).
+
+Common Flag:
+mkdir -p → Creates parent directories if they don’t exist.
+Example: mkdir -p projects/code
+This will create 'projects' and inside it 'code' if they don’t already exist.
+
+
+# Flags are like extra powers you attach to a command to change how it behaves.
