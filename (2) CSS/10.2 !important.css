@@ -1,0 +1,126 @@
+/* !important shows the most specific thing in a document
+*/
+
+* {
+    font-family: Baskerville Old Face;
+    background-color: lightcyan;
+}
+
+h1 {
+    color: #b92b27;
+    background-color: palegoldenrod !important;
+    background-color: white; /* this won't change the color as above mentioned !important makes it permanent */
+}
+
+h3 {
+    color: purple;
+    font-size: larger;
+    text-underline-offset: 5px;
+}
+
+div {
+    color: #b92b27;
+    font-weight: bold;
+}
+
+#login {
+    background-color: white;
+}
+
+#signup {
+    background-color: #b92b27;
+    color: white;
+}
+
+.upvote {
+    background-color: green;
+    color: white;
+}
+.answer {
+    background-color: dodgerblue;
+    color: white;
+}
+
+
+.post a {
+    color: purple;
+    background-color: yellow;
+}
+
+nav ul li {
+    color: #b92b27;
+}
+
+nav ul li a {
+    color: #b92b27;
+}
+
+p + h3 {
+    text-decoration: dashed underline;
+}
+
+div > input {
+    background-color: palegoldenrod;
+}
+
+input[type="text"] {
+    color: #b92b27;
+    font-size: medium;
+}
+
+input[type="password"] {
+    color: #b92b27;
+    font-size: medium;
+}
+
+input[type] {
+    border: 3px solid;
+    border-color: #b92b27;
+    border-radius: 10px;
+}
+
+/* :hover Pseudo Class */
+h3:hover {
+    text-decoration: double underline;
+    text-underline-offset: 5px;
+
+}
+
+button:hover {
+    background-color: palegoldenrod;
+    color: #b92b27;
+    border: 3px solid;
+}
+
+/* :active Pseudo Class */
+h3:active {
+    color: firebrick;
+}
+
+/* :checked Pseudo Class */
+.agreement > input[type="radio"]:checked + label {
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+/* nth-of-type Pseudo Class */
+#post:nth-of-type(2n-1) {
+    background-color: lightpink;
+} /* Changes done in odd places */
+
+#post:nth-of-type(2n) {
+    background-color: lightskyblue;
+} /* Changes done in even places */
+
+/* ::first-letter Pseudo Element */
+h1::first-letter {
+    color: black;
+}
+
+p::first-line {
+    color: purple
+}
+
+ul::selection {
+    background-color: lightgrey;
+}

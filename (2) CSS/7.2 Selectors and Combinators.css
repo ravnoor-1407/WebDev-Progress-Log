@@ -1,0 +1,99 @@
+/* CSS Selectors
+They defines the patterns to select elements to which a set of CSS rules are then applied along with their specificity.
+There are various types of selectors:
+(a) Element selector: To select all elements of the same type in a document.
+(b) Universal selector(*): To select everything in a document.
+(c) Id selector(#id): To select an element based on the value of the element's id attribute.
+(d) Class selector(.class): To select an element based on their class attribute.
+(e) Descendant selector(div p): To select an element inside element or other selector.
+*/
+
+/* Combinators in CSS 
+(a) Adjacent Sibling Combinator(+) targets the element that comes immediately after the specified element, provided they share the same parent.
+(b) General Sibling Combinator (~) targets all matching elements that follow the specified element, regardless of how many other elements are in between, as long as they share the same parent.
+(c) Child Combinator(>) selects elements that are direct children of a specified parent element.
+(d) Attribute Selector[attr="value"]targets HTML elements based on the presence, exact value, or partial value of their attributes.
+*/
+
+/* Universal Selector */
+* {
+    font-family: Baskerville Old Face;
+}
+
+/* Element Selector */
+h1 {
+    color: #b92b27;
+}
+
+h3 {
+    color: purple;
+    font-size: larger;
+    text-underline-offset: 5px;
+}
+
+div {
+    color: #b92b27;
+    font-weight: bold;
+}
+
+/* Id Selector */
+#login {
+    background-color: white;
+}
+
+#signup {
+    background-color: #b92b27;
+    color: white;
+}
+
+/* Class Selector */
+.upvote {
+    background-color: green;
+    color: white;
+}
+
+/* Descendant Selector */
+.post a {
+    color: purple;
+    background-color: yellow;
+}
+
+nav ul li {
+    color: #b92b27;
+}
+
+nav ul li a {
+    color: #b92b27;
+}
+
+/* Sibling Combinator */
+p + h3 {
+    text-decoration: dashed underline;
+}
+
+.upvote + .answer {
+    background-color: dodgerblue;
+    color: white;
+}
+
+/* Child Combinator */
+div > input {
+    background-color: palegoldenrod;
+}
+
+/* Attribute Selector */
+input[type="text"] {
+    color: #b92b27;
+    font-size: medium;
+}
+
+input[type="password"] {
+    color: #b92b27;
+    font-size: medium;
+}
+
+input[type] {
+    border: 3px solid;
+    border-color: #b92b27;
+    border-radius: 10px;
+}

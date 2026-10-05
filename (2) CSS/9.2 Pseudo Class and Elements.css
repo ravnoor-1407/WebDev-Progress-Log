@@ -1,0 +1,137 @@
+/*Pseudo Class in CSS
+A keyword added to a selector that specifies a special state of selelcted element(s).
+(a):hover - It matches an element when a user interacts with it using a pointing device.
+   It is generally triggered when the user moves the cursor (mouse pointer) over an element without pressing the mouse button.
+(b):active - It represents an element (such as a button) that is being activated by the user.
+   When using a mouse, "activation" typically starts when the user presses down the primary mouse button.
+(c):checked - It represents any radio, checkbox or option that is checked or toggled to ON state.
+(d):nth-of-type - It matches elements based on their position among siblings of the same type (tag name).
+
+Pseudo Elements in CSS
+A keyword added to a selector that lets you style a specific part of the selected element(s).
+(a)::first-letter - It applies styles to the first letter of the first line of a block container, but only when not preceded by other content (such as images or inline tables).
+(b)::first-line - It applies styles to the first line of a block container.
+(c)::selection 
+*/
+
+* {
+    font-family: Baskerville Old Face;
+    background-color: lightcyan;
+}
+
+h1 {
+    color: #b92b27;
+}
+
+h3 {
+    color: purple;
+    font-size: larger;
+    text-underline-offset: 5px;
+}
+
+div {
+    color: #b92b27;
+    font-weight: bold;
+}
+
+#login {
+    background-color: white;
+}
+
+#signup {
+    background-color: #b92b27;
+    color: white;
+}
+
+.upvote {
+    background-color: green;
+    color: white;
+}
+.answer {
+    background-color: dodgerblue;
+    color: white;
+}
+
+
+.post a {
+    color: purple;
+    background-color: yellow;
+}
+
+nav ul li {
+    color: #b92b27;
+}
+
+nav ul li a {
+    color: #b92b27;
+}
+
+p + h3 {
+    text-decoration: dashed underline;
+}
+
+div > input {
+    background-color: palegoldenrod;
+}
+
+input[type="text"] {
+    color: #b92b27;
+    font-size: medium;
+}
+
+input[type="password"] {
+    color: #b92b27;
+    font-size: medium;
+}
+
+input[type] {
+    border: 3px solid;
+    border-color: #b92b27;
+    border-radius: 10px;
+}
+
+/* :hover Pseudo Class */
+h3:hover {
+    text-decoration: double underline;
+    text-underline-offset: 5px;
+
+}
+
+button:hover {
+    background-color: palegoldenrod;
+    color: #b92b27;
+    border: 3px solid;
+}
+
+/* :active Pseudo Class */
+h3:active {
+    color: firebrick;
+}
+
+/* :checked Pseudo Class */
+.agreement > input[type="radio"]:checked + label {
+    color: dodgerblue;
+    font-weight: bold;
+}
+
+/* nth-of-type Pseudo Class */
+#post:nth-of-type(2n-1) {
+    background-color: lightpink;
+} /* Changes done in odd places */
+
+#post:nth-of-type(2n) {
+    background-color: lightskyblue;
+} /* Changes done in even places */
+
+/* ::first-letter Pseudo Element */
+h1::first-letter {
+    color: black;
+}
+
+p::first-line {
+    color: purple
+}
+
+ul::selection {
+    background-color: lightgrey;
+}
