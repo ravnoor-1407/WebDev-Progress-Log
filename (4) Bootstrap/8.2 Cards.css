@@ -1,0 +1,28 @@
+h1 {
+    text-align: center;
+}
+
+img {
+    height: 200px;
+    width: 90px;
+}
+
+a {
+    margin-top: 50px;
+}
+
+.container {
+    display: flex;
+}
+
+.btn-purple {
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+    color: #fff;
+}
+
+.btn-purple:hover {
+    background-color: #59339d;
+    border-color: #533093;
+    color: #fff;
+}
