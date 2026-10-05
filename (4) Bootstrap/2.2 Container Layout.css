@@ -1,0 +1,8 @@
+/* Container layout in Bootstrap */
+
+div {
+    background-color: lightblue;
+}
+.container {
+    background-color: lightcoral;
+}

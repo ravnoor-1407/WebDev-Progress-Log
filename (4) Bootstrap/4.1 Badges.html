@@ -1,0 +1,51 @@
+<!-- Badge Component in Bootstrao -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Badges</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="4.2 Badges.css">
+    </head>
+    <body>
+        <div class="container">
+            <!-- Basic badges -->
+            <h1>Prime Video</h1>
+            <ul>
+                <li>Raakh <span class="badge bg-primary"><i>#1 Trending</i></span></li>
+                <li>Mirzapur</li>
+                <li>Family Man</li>
+                <li>Our Fault</li>
+                <li>Aspirants Season 3 <span class="badge bg-success"><i>Latest Release</i></span></li>
+            </ul>
+        </div>
+        <div class="container">
+            <!-- Rounded Pill Badges -->
+            <h1>JioHotstar</h1>
+            <ul>
+                <li>Search: The Naina Murder Case <span class="badge rounded-pill bg-danger"><i>Crime Thriller</i></span></li>
+                <li>Chiraiya <span class="badge rounded-pill bg-warning"><i>Social Drama</i></span></li>
+                <li>The Night Manager</li>
+                <li>Aarya</li>
+                <li>Special Ops <span class="badge rounded-pill bg-danger"><i>Spy Thriller</i></span></li>
+            </ul>
+        </div>
+        <!-- Positioned bages along with buttons -->
+        <button type="button" class="btn btn-primary position-relative">
+            Wishlist
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                99+
+                <span class="visually-hidden">unread messages</span>
+            </span>
+        </button>
+        <br><br>
+        <button type="button" class="btn btn-primary position-relative">
+            Profile
+            <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                <span class="visually-hidden">New alerts</span>
+            </span>
+        </button>
+    </body>
+</html>
