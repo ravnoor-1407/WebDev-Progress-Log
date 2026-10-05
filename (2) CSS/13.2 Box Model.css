@@ -1,0 +1,70 @@
+/* Box Model in CSS
+The CSS box model is essentially a box that wraps around every HTML element.
+Every box consists of four parts: content, padding, borders and margins.
+
+(a) Height: By default, it sets the content area height of the element.
+(b) Width: By default, it sets the content area width of the element.
+(c) Border : Used to set border of an element.
+  i. border-width  sets the width of an element's border.
+  ii. border-style sets the line style for all four sides of an element's border.
+  iii. border-color sets the color of an element's border.
+  iv. border-left sets the properties of an element's left border.
+  v. border-right sets the properties of an element's right border.
+  vi. border-top sets the properties of an element's top border.
+  vii. border-bottom sets the properties of an element's bottom border.
+  viii. border-radius used to round the corners of an element's outer border edge.
+(d) Padding: Used to generate space inside an element, specifically between its core content and its outer border.
+  i. padding-top: Controls space at the upper inner edge.
+  ii. padding-right: Controls space at the right inner edge.
+  iii. padding-bottom: Controls space at the lower inner edge.
+  iv. padding-left: Controls space at the left inner edge
+(e) Margin: It sets spacing on the outside of border.
+  i.margin-top: Adds space above.
+  ii. margin-right: Adds space to the right.
+  iii. margin-bottom: Adds space below.
+  iv. margin-left: Adds space to the left.
+*/
+
+* {
+    font-family: Georgia;
+    background-color: lightcyan;
+    text-align: justify;
+}
+
+div {
+    height: 50px;
+    width: 1430px;
+    background-color: lightskyblue;
+    border-width: 5px;
+    border-style: solid;
+    border-color: navy;
+    /* Border Shorthand: border: 5px solid navy;*/
+    border-left-color: cadetblue;
+    border-right-color: cadetblue;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    /* Padding Shorthand:
+    1) padding: 10px; Top, Right, Bottom, Left = 10px
+    2) padding: 15px 30px; Top & Bottom = 15px | Left & Right = 30px
+    3) padding: 10px 20px 15px; Top = 10px | Left & Right = 20px | Bottom = 15px 
+    4) padding: 10px 20px 15px 5px; Top = 10px | Right = 20px | Bottom = 15px | Left = 5px
+    */
+    margin: 25px;
+    /* Margin Shorthand:
+    1) margin: 10px; Top, Right, Bottom, Left = 10px
+    2) margin: 15px 30px; Top & Bottom = 15px | Left & Right = 30px
+    3) margin: 10px 20px 15px; Top = 10px | Left & Right = 20px | Bottom = 15px 
+    4) margin: 10px 20px 15px 5px; Top = 10px | Right = 20px | Bottom = 15px | Left = 5px
+    */
+}
+
+button {
+    background-color: lightpink;
+    border: 3px solid deeppink;
+    border-radius: 10px;
+    padding: 0px 20px 0px 20px;
+    margin-left: 25px;
+}

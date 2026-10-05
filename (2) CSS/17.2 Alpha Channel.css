@@ -1,0 +1,17 @@
+/* Alpha Channel in CSS
+It sets the opacity for a color and ranges from 0 (hidden) to 1 and 00 to ff in hex code.
+rgba(255, 255, 255, 0.3)
+*/
+
+div {
+    height: 200px;
+    width: 200px;
+    background-color: #4dff00ff;
+}
+/* Green div (#4dff00ff) → The alpha channel in the hex color only affects the background’s transparency, so the text remains fully visible. */
+
+#opacity {
+    background-color: #ffa511;
+    opacity: 1;
+}
+/* Orange div (opacity: 0) → The CSS opacity property hides the entire element and all its children, making both the background and content invisible. */

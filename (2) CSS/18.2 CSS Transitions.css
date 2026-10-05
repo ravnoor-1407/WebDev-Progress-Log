@@ -1,0 +1,34 @@
+/* CSS Transitions
+Transitions enable you to define the transition between two states of an element.
+
+Transition Shorthand:
+property_name|duration|timing-function|delay
+
+transition: margin-top 2s ease-in-out 0.2s;
+*/
+
+#div1 {
+    height: 200px;
+    width: 200px;
+    background-color: #ff004dff;
+    transition-duration: 1s;
+    transition-delay: 0.5s;
+    /* transition: 1s 0.5s; */
+}
+
+#div1:hover {
+    background-color: #4dff00ff;
+    border-radius: 50%;
+}
+
+#div2 {
+    height: 200px;
+    width: 200px;
+    background-color: #4dff00ff;
+    transition: margin-left 1s ease-out 1s;
+}
+
+#div2:hover {
+    margin-left: 300px;
+    background-color: #ff004dff;
+}

@@ -1,0 +1,41 @@
+/* Display Property in CSS
+It sets whether an element is treated as a block or inline element and the layout used for its children */
+
+.inline {
+    height: 200px;
+    width: 400px;
+    background-color: lightpink;
+    border: 5px solid deeppink;
+    padding: 5px;
+    margin: 2px;
+    display: inline;
+}
+/* These appear next to each other, but the height: 200px; width: 400px; doesn’t actually apply because inline elements don’t respect those properties. */
+
+.block {
+    height: 30px;
+    width: 80px;
+    background-color: lightskyblue;
+    border: 5px solid navy;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    margin: 2px;
+    display: block;
+}
+/* Normally <span> is inline, but here you forced it to block. That’s why each name appears on its own line, with the blue box dimensions applied.
+Width/Height: Fully respected — you can set dimensions. */
+
+.inline-block {
+    height: 30px;
+    width: 80px;
+    background-color: greenyellow;
+    border: 5px solid green;
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+    margin: 2px;
+    display: inline-block;
+}
+/* These appear next to each other, but each has its own green box size.
+We used inline-block instead of inline for <div> as it allows us to set the height width */
