@@ -1,0 +1,50 @@
+/* Card Hover Effect */
+* {
+    font-family: Georgia;
+    background-color: lightcyan;
+}
+
+h1 {
+    text-align: center;
+    color: lightseagreen;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+h3, p {
+    font-size: larger;
+    color: lightseagreen;
+}
+
+.card {
+    height: 420px;
+    width: 300px;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 10px;
+    box-shadow: 0 4px 8px black;
+    transition: 1s;
+    position: relative;
+}
+
+.description {
+    padding: 0 2px 0 2px;
+    display: block;
+}
+
+.logo {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 30px;   /* Adjust size */
+    height: auto;
+}
+
+.profile {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card:hover {
+    box-shadow: 0 8px 18px black;
+}

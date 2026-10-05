@@ -1,0 +1,17 @@
+/* Background Image in CSS
+It lets you set an image as a background.
+*/
+
+div {
+    height: 150px;
+    width: 400px;
+    background-color: green;
+    color: greenyellow;
+    font-family: Georgia;
+    text-align: center;
+    font-weight: bolder;
+    font-size: x-large;
+    margin: 10px auto;
+    background-image: url("21.3\ Background.jpg");
+    background-size: cover;
+}

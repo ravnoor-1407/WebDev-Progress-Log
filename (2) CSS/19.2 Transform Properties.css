@@ -1,0 +1,111 @@
+/* Transform Property
+It lets you rotate, scale, skew, or translate an element. It modifies the coordinate space of the CSS visual formatting model.
+*/
+
+h1 {
+text-align: center;
+}
+
+section {
+    margin-top: 100px;
+}
+
+div{
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    background-color: #20b2aa;
+    border: 3px solid black;
+    margin: 10px;
+}
+
+div:nth-of-type(2n) {
+    background-color: #ebb02d;
+}
+
+div:nth-of-type(3n) {
+    background-color: #f7db6a;
+}
+
+/* Transform Rotate defines a transformation that rotates an element around a fixed point on the 2D plane, without deforming it. */
+#one {
+    transform: rotate(15deg);
+}
+
+#two {
+    transform: rotate(15deg);
+}
+
+#three {
+    transform: rotate(15deg);
+}
+
+#four {
+    transform: rotate(15deg);
+}
+
+#five {
+    transform: rotate(15deg);
+}
+
+/* Transform Scale defines a transformation that resizes an element on the 2D plane.*/
+#six {
+    transform: scaleX(0.2);
+}
+
+#seven {
+    transform: scaleX(0.4);
+}
+
+#eight {
+    transform: scaleX(0.6);
+}
+
+#nine {
+    transform: scaleX(0.8);
+}
+#ten {
+    transform: scaleX(1.0);
+}
+
+/* Transform Translate repositions an element in the horizontal and/or vertical directions.*/
+#eleven {
+    transform: translateX(200px);
+}
+
+#twelve {
+    transform: translateX(150px);
+}
+
+#thirteen {
+    transform: translateX(100px);
+}
+
+#fourteen {
+    transform: translateX(50px);
+}
+
+#fifteen {
+    transform: translateX(0px);
+}
+
+/* Transform Skew defines a transformation that skews an element on the 2D plane.*/
+#sixteen {
+    transform: skew(10deg);
+}
+
+#seventeen {
+    transform: skew(20deg);
+}
+
+#eighteen {
+    transform: skew(30deg);
+}
+
+#nineteen {
+    transform: skew(40deg);
+}
+
+#twenty {
+    transform: skew(50deg);
+}

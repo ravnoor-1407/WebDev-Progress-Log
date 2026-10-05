@@ -1,0 +1,13 @@
+/* Box Shadow in CSS
+This property adds shadow effects around an element's frame. You can set multiple effects separated by commas. A box shadow is described by X and Y offsets relative to the element, blur and spread radius, and color.
+*/
+
+div {
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    background-color: #7aa874;
+    border: 2px solid black;
+    margin: 10px auto;
+    box-shadow: 2px 2px 8px black;
+}
