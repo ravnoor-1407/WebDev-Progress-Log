@@ -1,0 +1,52 @@
+<!-- Cascading Style Sheets
+It is a language that is used to describe the style of a document.
+
+Basic Format of CSS
+selector{
+    property: value;
+}
+    
+We can include the styles via two methods:
+(a) Inline styles: Writing style directly on each element.
+Example: <h1 style = "color: red">Apna College</h1>
+
+
+(b) Using <style> tag: Style is added using the <style> element in the same document.
+Example:
+<style>
+    h1 {
+        color: red;
+    }
+</style>
+
+(c) External stylesheet: Writing CSS in a separate document and linking it with HTML file.
+Example: <link rel="stylesheet" href="style.css">
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Basic Format of CSS</title>
+        <link rel="stylesheet" href="1.2 Basic Format of CSS.css">
+        <style>
+            body{
+                background-color: black;
+            }
+            h2{
+                color: palegreen;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Inline styles -->
+        <h1 style="color: palevioletred;">Ravnoor Kaur</h1>
+
+        <!-- Using <style> tag in <head> tag-->
+        <h2>BTech CSE(Artificial Intelligence & Machine Learning)</h2>
+
+        <!-- External stylesheet -->
+        <h3>Lovely professional University, Phagwara, Punjab</h3>
+    </body>
+</html>
