@@ -1,0 +1,26 @@
+/* CSS Animations */
+
+.box {
+    height: 50px;
+    width: 530px;
+    font-family: Space Mono;
+    
+    animation: Animation 2s ease-in 1s infinite alternate;
+}
+
+@keyframes Animation {
+    from{
+        text-align: center;
+        font-size: large;
+        border-radius: 0px;
+        background-color: pink;
+        border: 5px solid deeppink;
+    }
+    to {
+        text-align: center;
+        font-size: xx-large;
+        border-radius: 40px;
+        background-color: lightskyblue;
+        border: 5px solid blue;
+    }
+}

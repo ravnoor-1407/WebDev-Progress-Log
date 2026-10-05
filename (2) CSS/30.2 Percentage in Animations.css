@@ -1,0 +1,49 @@
+/* % in Animations
+It represent temporal waypoints within a @keyframes timeline, where 0% is the exact start of the animation duration and 100% is the final frame
+
+@keyframes animationName {
+    0% {font-size: 20px;}
+    50% {font-size: 30px;}
+    100% {font-size: 40px;}
+}
+*/
+
+.box {
+    height: 50px;
+    width: 530px;
+    font-family: Space Mono;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    border: 10px solid black;
+    border-radius: 15px;
+    
+    animation: colorAnimation 5s ease-in 1s infinite alternate;
+}
+
+@keyframes colorAnimation {
+    0% {
+        background-color: lightblue;
+        color: black;
+    }
+    10% {
+       background-color: paleturquoise;
+       color: black; 
+    }
+    30% {
+        background-color: lightskyblue;
+        color: black;
+    }
+    50% {
+        background-color: lightseagreen;
+        color: white;
+    }
+    70% {
+        background-color: darkcyan;
+        color: white;
+    }
+    100% {
+        background-color: teal;
+        color: white;
+    }
+}

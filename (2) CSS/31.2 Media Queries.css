@@ -1,0 +1,39 @@
+/* Media Queries
+It helps to create a responsive website,
+*/
+
+h1 {
+    background-color: yellow;
+    border: 5px solid black;
+    text-align: center;
+}
+
+@media (width: 500px) {
+    h1 {
+        background-color: greenyellow;
+        color: black;
+    }
+}
+/* If we want to change the css properties at specific width */
+
+@media (min-width: 600px) {
+    h1 {
+        background-color: deeppink;
+        color: white;
+    }
+}
+/* If we want to change the css properties at specific width and above that width */
+
+@media (max-width: 400px) {
+    h1{
+        background-color: deepskyblue;
+        color: white;
+    }
+}
+/* If we want to change the css properties at specific width and below that width */
+
+@media (orientation: landscape) {
+    h1 {border-radius: 30px;
+    }
+}
+/* If we want to change the css properties when screen orientation is changed */

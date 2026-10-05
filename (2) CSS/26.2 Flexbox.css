@@ -1,0 +1,77 @@
+/* Flexbox in CSS
+It is basically Flexible Box Layout, a one-dimensinal layout method for arranging items in rows and columns.
+
+1. display: flex transforms an element into a block-level flex container.
+  It establishes a flex formatting context for all of its direct children, converting them into flex items that arrange themselves along a single dimension (either rows or columns)
+  
+2. Flexbox Direction sets how flex items are placed in the flex container, along which axis and direction.
+  flexbox-direction: row; - Main axis(left to right)
+  flexbox-direction: row-reverse; - Main axis(right to left)
+  flexbox-direction: column; - Main axis(top to bottom)
+  flexbox-direction: column-reverse; - Main axis(bottom to top)
+
+3. Justify Content tells how the browser distributes space between and around content items along the main-axis.
+  justify-content: flex-start;
+  justify-content: flex-end;
+  justify-content: center;
+  justify-content: space-between;
+  justify-content: space-around;
+  justify-content: space-evenly;
+
+4. Flex Wrap sets whether flex items are forced onto one line or can wrap onto multiple lines.
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+
+5. Align items distributes our items along the cross axis.
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: center;
+  align-items: baseline;
+
+6. Align Content sets the distribution of space between and around content items along a flexbox's cross axis.
+  align-content:flex-start;
+  align-content: flex-end;
+  align-content: center;
+  align-content: space-between;
+  align-content: space-around;
+  align-content: space-evenly;
+  
+7. Align Self aligns an item along the cross-axis.
+  align-self: flex-start;
+  align-self: flex-end;
+  align-self: center;
+  align-self: baseline;
+*/
+
+#container {
+    height: 560px;
+    width: 30%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+    align-self: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+#container div {
+    height: 80px;
+    width: 300px;
+    color: white;
+    text-align: center;
+    font-family: Georgia;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+
+/* Note: When we apply display: flex then the applied height width is ignored. */
