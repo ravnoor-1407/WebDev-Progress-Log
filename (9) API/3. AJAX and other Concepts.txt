@@ -1,0 +1,51 @@
+AJAX (Asynchronous JavaScript and XML) 
+It is a web development technique that lets web pages communicate with servers in the background, so parts of a page can update dynamically without reloading the entire page. 
+It’s widely used in modern apps like search suggestions, social media likes, and chat systems to make user experiences faster and smoother.
+
+🔑 Key Points About AJAX
+
+Meaning: AJAX = Asynchronous JavaScript and XML.
+Purpose: Update parts of a webpage without refreshing the whole page.
+Data Formats: Works with JSON (most common today), XML, HTML, or plain text.
+Core Technologies:
+
+- HTML/CSS → Page structure & styling
+- JavaScript → Logic & event handling
+- DOM → Update page content dynamically
+- XMLHttpRequest / Fetch API → Send/receive data asynchronously
+
+HTTP verbs (also called HTTP methods) are the actions you can perform when making requests to a server.
+They define what you want to do with a resource (like data on a website or API).
+
+🌐 Common HTTP Verbs
+Verb	Purpose	                                    Example
+GET	    Retrieve data from the server	            Fetching a list of users
+POST	Send new data to the server	                Submitting a form or creating a new user
+PUT	    Update/replace existing data	            Updating a user’s profile completely
+PATCH	Partially update existing data	            Changing just the email of a user
+DELETE	Remove data from the server	                Deleting a user account
+HEAD	Retrieve only headers (no body)	            Checking if a resource exists
+OPTIONS	Ask the server which methods are allowed	Used in CORS preflight requests
+
+
+HTTP status codes are 3‑digit numbers returned by a server in response to a client’s request. 
+They tell you whether the request was successful, failed, or needs further action.
+
+✅ Common Status Codes
+
+200 OK → Request succeeded
+201 Created → Resource successfully created (e.g., after POST)
+204 No Content → Success, but no data returned
+
+301 Moved Permanently → Resource moved to a new URL
+302 Found → Temporary redirection
+304 Not Modified → Cached version is still valid
+
+400 Bad Request → Invalid request syntax
+401 Unauthorized → Authentication required
+403 Forbidden → Access denied
+404 Not Found → Resource doesn’t exist
+
+500 Internal Server Error → Generic server failure
+502 Bad Gateway → Invalid response from upstream server
+503 Service Unavailable → Server overloaded or down

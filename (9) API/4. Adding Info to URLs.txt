@@ -1,0 +1,62 @@
+# Adding Information to URLs
+
+URLs can carry extra information in different ways. The three most common are:
+1. Query Strings
+2. Path Parameters
+3. HTTP Headers
+
+## 1. Query Strings
+- Query strings are added after a `?` in the URL.
+- They consist of key=value pairs, separated by `&`.
+- Commonly used for filtering, searching, pagination, or tracking.
+
+Example URL:
+https://example.com/products?category=books&sort=price&page=2
+
+JavaScript Example:
+const url = new URL("https://example.com/products");
+url.searchParams.append("category", "books");
+url.searchParams.append("sort", "price");
+url.searchParams.append("page", "2");
+console.log(url.toString());
+// https://example.com/products?category=books&sort=price&page=2
+
+## 2. Path Parameters
+- Path parameters are part of the URL itself.
+- Often used in REST APIs to identify specific resources.
+- They make URLs cleaner and more descriptive.
+
+Example URL:
+https://api.example.com/users/123/orders
+
+JavaScript Example:
+const userId = 123;
+const url = `https://api.example.com/users/${userId}/orders`;
+console.log(url);
+// https://api.example.com/users/123/orders
+
+
+## 3. HTTP Headers
+- Headers are not part of the URL, but extra information sent with the request.
+- Used for authentication, content type, caching, etc.
+- They travel alongside the request.
+
+Example (Node.js with fetch):
+import fetch from "node-fetch";
+
+const url = "https://api.example.com/data";
+
+fetch(url, {
+  headers: {
+    "Authorization": "Bearer YOUR_API_KEY",
+    "Accept": "application/json",
+    "Content-Type": "application/json"
+  }
+})
+  .then(res => res.json())
+  .then(data => console.log(data));
+
+# Summary
+- Query strings → add info after `?`
+- Path parameters → embed info in the URL path
+- HTTP headers → send extra info with the request (not visible in the URL)
