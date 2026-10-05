@@ -1,0 +1,58 @@
+<!-- Tables in HTML -->
+<!-- 
+Tables are used to represent data in a structured format.
+The horizontal fields are called rows and the vertical fields are called columns.
+The primary row is called 'header row' and rest of the other rows are called 'data rows'.
+The header row is used to define the column names and the data rows are used to represent the actual data.
+
+
+HTML Elements:
+<tr> used to display table rows
+<th> used to display table header
+<td> used to display table data
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tables in HTML</title>
+    </head>
+    <body>
+        <table border="black">
+            <caption>Student Information</caption>
+            <!-- Table Header -->
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <!-- Table Data -->
+            <tbody>
+                <tr>
+                    <td>Ravnoor Kaur</td>
+                    <td>19</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>Shradha Khapra</td>
+                    <td>20</td>
+                    <td>A+</td>
+                </tr>
+                <tr>
+                    <td>Aman Dhatterwal</td>
+                    <td>21</td>
+                    <td>B</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+
+<!-- 
+Notes:
+1. Here <table border = "black" is used to show distinct columns, but generally it's better to use CSS for styling tables. 
+--> 
