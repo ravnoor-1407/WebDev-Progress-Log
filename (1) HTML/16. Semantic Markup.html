@@ -1,0 +1,59 @@
+<!-- Semantic Markup in HTML -->
+<!--
+It is the markup that relates to the meaning of content.
+
+On the basis of the markup, we have two types of tags:
+(a) Semantic tags: It describe their meaning and role in the document to both the browser and the developer. They tell you exactly what kind of content they contain.
+Example: <header>, <footer>, <main>, <nav>, <section>, <article>
+
+(b) Non-semantic tags: It tell you nothing about the content they hold. They are generic containers used purely for layout, grouping, or applying CSS styling
+Example: <div>, <span>
+
+Why we use semantic tags?
+(i) It makes our website code meaningful & layout stuctured.
+(ii) It makes your website SEO(search engine optimization) friendly.
+(iii) It makes the website readable and the performance of screen readers more optimized.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Semantic Markup</title>
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header>
+        <h1>Apna College</h1>
+            <nav>
+            <a href="#about">About</a> |
+            <a href="#courses">Courses</a> |
+            <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <!-- Main Content Section -->
+        <main>
+            <section id="about">
+            <h2>About Us</h2>
+            <p>Apna College is a place to learn coding, development, and career skills.</p>
+            </section>
+
+            <section id="courses">
+            <h2>Our Courses</h2>
+            <ul>
+                <li>Web Development</li>
+                <li>Data Structures & Algorithms</li>
+                <li>Competitive Programming</li>
+            </ul>
+            </section>
+        </main>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2026 Apna College. All rights reserved.</p>
+            <p>Contact us: info@apnacollege.in</p>
+        </footer>    
+    </body>
+</html>
